@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100&display=swap');
+:root {
+    --pinkColor: #D141F6;
+    --blueColor: #3790FB;
+    --white: #FFFFFF;
+    --fwhite: #FFF;
+    --black-btn: #1D2431;
+}
+
+@mixin font-style($color,
+$textAlign,
+$ffamily,
+$fsize,
+$fstyle,
+$fweight,
+$lheight,
+$lspacing:unset) {
+    color: $color !important;
+    text-align: $textAlign !important;
+    font-family: $ffamily !important;
+    font-size: $fsize !important;
+    font-style: $fstyle !important;
+    font-weight: $fweight !important;
+    line-height: $lheight !important;
+    letter-spacing: $lspacing !important;
+}
+
+@mixin width-height($width,
+$height) {
+    width: $width !important;
+    height: $height !important;
+}
+
+@mixin btn-style($border-radius,
+$width,
+$border,
+$background,
+$box-shadow) {
+    border-radius: $border-radius !important;
+    width: $width !important;
+    border: $border !important;
+    background: $background !important;
+    box-shadow: $box-shadow !important;
+}
+
+@mixin common-box-shadow($border-radius,
+$border,
+$background,
+$backdrop,
+$height,
+$width) {
+    border-radius: $border-radius !important;
+    border: $border !important;
+    background: $background !important;
+    backdrop-filter: $backdrop !important;
+    height: $height !important;
+    width: $width !important;
+}
+
+.image-container {
+    background: linear-gradient(to right, var(--blueColor), var(--pinkColor));
+    @include width-height(auto,
+    180px);
+    img {
+        @include width-height(unset,
+        27vh);
+        object-fit: cover;
+    }
+    .second-img {
+        height: 92px !important;
+        position: relative;
+        right: 164px;
+        top: 31px;
+    }
+    .text-container {
+        padding-top: 32px;
+        .sm-title {
+            @include font-style(var(--fwhite),
+            center,
+            Roboto,
+            7.173px,
+            normal,
+            500,
+            normal,
+            4.375px);
+        }
+        .over {
+            @include font-style(var(--fwhite),
+            center,
+            Bebas Neue,
+            38.038px,
+            normal,
+            400,
+            83%);
+        }
+        .whatsapp {
+            @include font-style(transparent,
+            center,
+            Bebas Neue,
+            40.038px,
+            normal,
+            400,
+            83%);
+            padding-left: 4px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+        }
+        .btn-section {
+            display: flex;
+            justify-content: center;
+            padding-top: 13%;
+            .get-btn {
+                @include width-height(142px,
+                6vh);
+                @include font-style(var(--fwhite),
+                center,
+                Roboto,
+                11.955px,
+                normal,
+                500,
+                normal);
+                border-radius: 10.782px !important;
+                background: linear-gradient(47deg, #3790FB 0%, #D141F6 100%);
+                box-shadow: 4.781954765319824px 3.586466073989868px 9.563909530639648px 0px rgba(0, 0, 0, 0.41);
+            }
+        }
+    }
+}
+
+.signup-container {
+    @include width-height(100%,
+    47px);
+    background: #1D2532;
+    backdrop-filter: blur(2.5999996662139893px);
+    display: flex;
+    justify-content: end;
+    .g-container {
+        width: 61%;
+        align-items: center;
+    }
+    .signup-text {
+        width: 88%;
+        padding-top: 20px;
+        @include font-style(rgba(255,
+        255,
+        255,
+        1),
+        left,
+        Gotham,
+        14px,
+        normal,
+        500,
+        normal);
+    }
+}
+
+.blue-btn {
+    @include font-style(var(--fwhite),
+    center,
+    Roboto,
+    10px,
+    normal,
+    500,
+    20px);
+    @include btn-style(4px,
+    120px,
+    1px solid rgba(255,
+    255,
+    255,
+    0.07),
+    var(--blueColor),
+    4px 3px 8px 0px rgba(0,
+    0,
+    0,
+    0.41));
+}
+
+.black-btn {
+    @include font-style(var(--fwhite),
+    center,
+    Roboto,
+    10px,
+    normal,
+    500,
+    20px);
+    @include btn-style(4px,
+    120px,
+    1px solid rgba(255,
+    255,
+    255,
+    0.07),
+    var(--black-btn),
+    4px 3px 8px 0px rgba(0,
+    0,
+    0,
+    0.41));
+}
+
+.signup-count {
+    height: 100vh;
+    background: url('../images/bg.png') !important;
+    background-color: #121B24 !important;
+    // background: linear-gradient(to bottom, #00010E, #03060A00) !important;
+}
+
+.box-container {
+    margin: auto;
+    margin-top: 16px;
+    @include common-box-shadow(8px,
+    1px solid rgba(255,
+    255,
+    255,
+    0.07),
+    rgba(70,
+    73,
+    101,
+    0.21),
+    blur(2.5999996662139893px),
+    279px,
+    351px);
+    padding-top: 14%;
+    .box-text {
+        @include font-style(var(--fwhite),
+        center,
+        Gotham,
+        26px,
+        normal,
+        500,
+        normal);
+        width: 87%;
+        padding-left: 48px;
+    }
+    .whatapps-icon {
+        display: flex;
+        margin-left: 20px;
+        .whatsapp-text {
+            border-radius: 6.876px;
+            background: linear-gradient(0deg, #25CF43 0%, #61FD7D 100%);
+            @include font-style(#1A1A1A,
+            center,
+            Gotham,
+            20.572px,
+            normal,
+            500,
+            normal);
+            // width: 87%;
+            width: 266px;
+            padding: 13px;
+            height: 46px;
+            margin-left: -19px;
+            margin-top: 8px;
+            z-index: -9999;
+        }
+    }
+}
+
+.form-control {
+    @include common-box-shadow(4px,
+    1px solid rgba(255,
+    255,
+    255,
+    0.07),
+    rgba(70,
+    73,
+    101,
+    0.21),
+    blur(2.5999999046325684px),
+    33px,
+    332px);
+    color: var(--white) !important;
+}
+
+::placeholder {
+    color: var(--white) !important;
+}
+
+.input-select {
+    background: #2d3145 !important;
+    border-radius: 4px;
+    color: var(--white);
+}
+
+.privay-policy {
+    .check-box {
+        margin-left: 13px;
+    }
+    p {
+        @include font-style(var(--fwhite),
+        unset,
+        Roboto,
+        10px,
+        normal,
+        500,
+        normal);
+        padding: 1px 25px;
+        margin-top: 15px;
+    }
+    a {
+        @include font-style(var(--blueColor),
+        unset,
+        Roboto,
+        10px,
+        normal,
+        700,
+        normal);
+    }
+}
+
+.height-singup {
+    height: 354px !important;
+}
+
+.text-already {
+    @include font-style(var(--fwhite),
+    center,
+    Roboto,
+    10px,
+    normal,
+    400,
+    normal);
+    a {
+        @include font-style(var(--pinkColor),
+        unset,
+        Roboto,
+        10px,
+        normal,
+        400,
+        normal);
+    }
+}
+
+.my-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(26, 28, 40, 0.90);
+    backdrop-filter: blur(4px);
+    width: 375px;
+    height: 52px;
+    .profile-img {
+        width: 30px;
+        height: 30px;
+        background: url(../images/profile.png), lightgray 0% 0% / 1.4999999664723873px 1.4999999664723873px repeat;
+        mix-blend-mode: #FECB88;
+    }
+}
