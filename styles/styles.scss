@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100&display=swap");
 :root {
-    --pinkColor: #D141F6;
-    --blueColor: #3790FB;
-    --white: #FFFFFF;
-    --fwhite: #FFF;
-    --black-btn: #1D2431;
+    --pinkColor: #d141f6;
+    --blueColor: #3790fb;
+    --white: #ffffff;
+    --fwhite: #fff;
+    --black-btn: #1d2431;
 }
 
-@mixin font-style($color,
+@mixin font-style( $color,
 $textAlign,
 $ffamily,
 $fsize,
 $fstyle,
 $fweight,
 $lheight,
-$lspacing:unset) {
+$lspacing: unset) {
     color: $color !important;
     text-align: $textAlign !important;
     font-family: $ffamily !important;
@@ -44,7 +44,7 @@ $box-shadow) {
     box-shadow: $box-shadow !important;
 }
 
-@mixin common-box-shadow($border-radius,
+@mixin common-box-shadow( $border-radius,
 $border,
 $background,
 $backdrop,
@@ -58,103 +58,6 @@ $width) {
     width: $width !important;
 }
 
-.image-container {
-    background: linear-gradient(to right, var(--blueColor), var(--pinkColor));
-    @include width-height(auto,
-    180px);
-    img {
-        @include width-height(unset,
-        27vh);
-        object-fit: cover;
-    }
-    .second-img {
-        height: 92px !important;
-        position: relative;
-        right: 164px;
-        top: 31px;
-    }
-    .text-container {
-        padding-top: 32px;
-        .sm-title {
-            @include font-style(var(--fwhite),
-            center,
-            Roboto,
-            7.173px,
-            normal,
-            500,
-            normal,
-            4.375px);
-        }
-        .over {
-            @include font-style(var(--fwhite),
-            center,
-            Bebas Neue,
-            38.038px,
-            normal,
-            400,
-            83%);
-        }
-        .whatsapp {
-            @include font-style(transparent,
-            center,
-            Bebas Neue,
-            40.038px,
-            normal,
-            400,
-            83%);
-            padding-left: 4px;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: rgb(255, 255, 255);
-        }
-        .btn-section {
-            display: flex;
-            justify-content: center;
-            padding-top: 13%;
-            .get-btn {
-                @include width-height(142px,
-                6vh);
-                @include font-style(var(--fwhite),
-                center,
-                Roboto,
-                11.955px,
-                normal,
-                500,
-                normal);
-                border-radius: 10.782px !important;
-                background: linear-gradient(47deg, #3790FB 0%, #D141F6 100%);
-                box-shadow: 4.781954765319824px 3.586466073989868px 9.563909530639648px 0px rgba(0, 0, 0, 0.41);
-            }
-        }
-    }
-}
-
-.signup-container {
-    @include width-height(100%,
-    47px);
-    background: #1D2532;
-    backdrop-filter: blur(2.5999996662139893px);
-    display: flex;
-    justify-content: end;
-    .g-container {
-        width: 61%;
-        align-items: center;
-    }
-    .signup-text {
-        width: 88%;
-        padding-top: 20px;
-        @include font-style(rgba(255,
-        255,
-        255,
-        1),
-        left,
-        Gotham,
-        14px,
-        normal,
-        500,
-        normal);
-    }
-}
-
 .blue-btn {
     @include font-style(var(--fwhite),
     center,
@@ -163,7 +66,7 @@ $width) {
     normal,
     500,
     20px);
-    @include btn-style(4px,
+    @include btn-style( 4px,
     120px,
     1px solid rgba(255,
     255,
@@ -184,7 +87,7 @@ $width) {
     normal,
     500,
     20px);
-    @include btn-style(4px,
+    @include btn-style( 4px,
     120px,
     1px solid rgba(255,
     255,
@@ -197,17 +100,114 @@ $width) {
     0.41));
 }
 
+.image-container {
+    background: linear-gradient(to right, var(--blueColor), var(--pinkColor));
+    @include width-height(auto,
+    180px);
+    img {
+        @include width-height(unset,
+        27vh);
+        object-fit: cover;
+    }
+    .second-img {
+        height: 92px !important;
+        position: relative;
+        right: 164px;
+        top: 31px;
+    }
+    .text-container {
+        padding-top: 32px;
+        .sm-title {
+            @include font-style( var(--fwhite),
+            center,
+            Roboto,
+            7.173px,
+            normal,
+            500,
+            normal,
+            4.375px);
+        }
+        .over {
+            @include font-style( var(--fwhite),
+            center,
+            Bebas Neue,
+            38.038px,
+            normal,
+            400,
+            83%);
+        }
+        .whatsapp {
+            @include font-style( transparent,
+            center,
+            Bebas Neue,
+            40.038px,
+            normal,
+            400,
+            83%);
+            padding-left: 4px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+        }
+        .btn-section {
+            display: flex;
+            justify-content: center;
+            padding-top: 13%;
+            .get-btn {
+                @include width-height(142px,
+                6vh);
+                @include font-style( var(--fwhite),
+                center,
+                Roboto,
+                11.955px,
+                normal,
+                500,
+                normal);
+                border-radius: 10.782px !important;
+                background: linear-gradient(47deg, #3790fb 0%, #d141f6 100%);
+                box-shadow: 4.781954765319824px 3.586466073989868px 9.563909530639648px 0px rgba(0, 0, 0, 0.41);
+            }
+        }
+    }
+}
+
+.signup-container {
+    @include width-height(100%,
+    47px);
+    background: #1d2532;
+    backdrop-filter: blur(2.5999996662139893px);
+    display: flex;
+    justify-content: end;
+    .g-container {
+        width: 61%;
+        align-items: center;
+    }
+    .signup-text {
+        width: 88%;
+        padding-top: 20px;
+        @include font-style( rgba(255,
+        255,
+        255,
+        1),
+        left,
+        Gotham,
+        14px,
+        normal,
+        500,
+        normal);
+    }
+}
+
 .signup-count {
     height: 100vh;
-    background: url('../images/bg.png') !important;
-    background-color: #121B24 !important;
+    background: url("../images/bg.png") !important;
+    background-color: #121b24 !important;
     // background: linear-gradient(to bottom, #00010E, #03060A00) !important;
 }
 
 .box-container {
     margin: auto;
     margin-top: 16px;
-    @include common-box-shadow(8px,
+    @include common-box-shadow( 8px,
     1px solid rgba(255,
     255,
     255,
@@ -221,7 +221,7 @@ $width) {
     351px);
     padding-top: 14%;
     .box-text {
-        @include font-style(var(--fwhite),
+        @include font-style( var(--fwhite),
         center,
         Gotham,
         26px,
@@ -236,8 +236,8 @@ $width) {
         margin-left: 20px;
         .whatsapp-text {
             border-radius: 6.876px;
-            background: linear-gradient(0deg, #25CF43 0%, #61FD7D 100%);
-            @include font-style(#1A1A1A,
+            background: linear-gradient(0deg, #25cf43 0%, #61fd7d 100%);
+            @include font-style( #1a1a1a,
             center,
             Gotham,
             20.572px,
@@ -256,7 +256,7 @@ $width) {
 }
 
 .form-control {
-    @include common-box-shadow(4px,
+    @include common-box-shadow( 4px,
     1px solid rgba(255,
     255,
     255,
@@ -286,7 +286,7 @@ $width) {
         margin-left: 13px;
     }
     p {
-        @include font-style(var(--fwhite),
+        @include font-style( var(--fwhite),
         unset,
         Roboto,
         10px,
@@ -297,7 +297,7 @@ $width) {
         margin-top: 15px;
     }
     a {
-        @include font-style(var(--blueColor),
+        @include font-style( var(--blueColor),
         unset,
         Roboto,
         10px,
@@ -320,7 +320,7 @@ $width) {
     400,
     normal);
     a {
-        @include font-style(var(--pinkColor),
+        @include font-style( var(--pinkColor),
         unset,
         Roboto,
         10px,
@@ -330,16 +330,307 @@ $width) {
     }
 }
 
-.my-header {
+.main-content {
+    height: 100vh;
+    background: url(../images/casinobg.svg);
+    background-color: #121b24 !important;
+    // background-color: #03060A00 !important;
+    // filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.90)) blur(1px) !important;
+    .my-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        background: rgba(26, 28, 40, 0.9);
+        backdrop-filter: blur(4px);
+        width: 375px;
+        height: 52px;
+        .profile-img {
+            width: 30px;
+            height: 30px;
+            margin: 12px 18px;
+            border-radius: 7.5px !important;
+            background: #fed399 !important;
+        }
+        .price-show {
+            display: flex;
+            padding: 11px 0px;
+            .price-section {
+                border-radius: 4px 0px 0px 4px;
+                background: #464965;
+                display: flex;
+                padding: 0px 17px;
+                flex-direction: column;
+                .price-one {
+                    color: var(--white, #FFF);
+                    text-align: center;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+                .price-bonus {
+                    color: #D3D3D3;
+                    font-family: Roboto;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 155.687%;
+                }
+            }
+            .price-add {
+                border-radius: 0px 4px 4px 0px;
+                background: var(--brand-blue, #3790FB);
+            }
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    img {
+        width: 22.6px;
+        height: 31.521px;
+    }
+    span {
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 8.831px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+.banner-section {
+    .bonus-section {
+        padding-top: 27px;
+    }
+}
+
+.search-section {
+    display: flex;
+    .form-group {
+        display: flex;
+        width: 82%;
+        margin: 11px 10px;
+        img {
+            border: 1px solid;
+            padding: 0px 12px;
+            background: #1c232f;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-left: unset !important;
+        }
+    }
+    .menu-icon {
+        height: 32px;
+        margin-top: 11px;
+    }
+}
+
+.icon-menu {
+    height: 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    background: rgba(26, 28, 40, 0.90);
+    background: rgba(70, 73, 101, 0.21);
+    backdrop-filter: blur(2.5999996662px);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 7px;
+    .icon-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        .icon-round {
+            border: 1px solid #353C4B;
+            padding: 10px 10px;
+            border-radius: 20px;
+            background-color: #262D3D;
+        }
+        .provider {
+            fill: linear-gradient(90deg, rgba(55, 144, 251, 0.20) 0%, rgba(209, 65, 246, 0.20) 100%);
+            // background: linear-gradient(to right, #3790FB, #D141F6);
+        }
+    }
+}
+
+.logo-box {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(70, 73, 101, 0.21);
+    backdrop-filter: blur(2.5999996662px);
+    height: 13vh;
+    width: 45%;
+    padding: 15px 8px;
+    margin: 5px 9px;
+}
+
+.combine-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    .select-group {
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        background: rgba(70, 73, 101, 0.21);
+        width: 44%;
+        padding: 6px 10px;
+        height: 31px;
+    }
+    .select {
+        background-color: #1d2431;
+        width: 81%;
+        border: unset;
+        color: white;
+    }
+}
+
+.divider {
+    border: 1px solid #ffffff3d;
+    width: 93%;
+    display: flex;
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+.term-text {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #828FA4;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    span {
+        padding: 4px 5px;
+    }
+    /* 13.8px */
+}
+
+.kheloyar-text {
+    color: #828FA4;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 115%;
+    padding: 10px;
+    /* 16.1px */
+}
+
+.copy-right {
+    color: #828FA4;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 115%;
+    /* 11.5px */
+}
+
+.whatapp-container {
+    display: flex;
+    margin-left: 15px;
+    img {
+        z-index: 99;
+    }
+    .text-container {
+        border-radius: 6.034px;
+        background: var(--brand-blue, #3790FB);
+        box-shadow: 4px 3px 8px 0px rgba(0, 0, 0, 0.41);
+        color: var(--white, #FFF);
+        font-family: Gotham;
+        font-size: 12.045px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        position: relative;
+        height: 53px;
+        top: 4px;
+        right: 20px;
+        padding: 7px 20px;
+        width: 49%;
+    }
+}
+
+.footer {
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(26, 28, 40, 0.9);
     backdrop-filter: blur(4px);
-    width: 375px;
-    height: 52px;
-    .profile-img {
-        width: 30px;
-        height: 30px;
-        background: url(../images/profile.png), lightgray 0% 0% / 1.4999999664723873px 1.4999999664723873px repeat;
-        mix-blend-mode: #FECB88;
+    width: 86%;
+    margin: auto;
+    height: 10vh;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+    padding-top: 13px;
+    margin-top: 10px;
+    .icon-text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        span {
+            color: var(--white, #FFF);
+            font-family: Roboto;
+            font-size: 11.898px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        img {
+            height: 27px;
+        }
+    }
+}
+
+.image-content {
+    .text-area {
+        fill: rgba(70, 73, 101, 0.21);
+        stroke: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(2.5999996662139893px);
+        background: #1D2532;
+        height: 11vh;
+        margin-bottom: 9px;
+        span {
+            padding: 26%;
+        }
+        .start-image {
+            text-align: center;
+            margin-left: 56px;
+            margin-top: -29px;
+        }
+    }
+    .main-title {
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .small-title {
+        color: #FFF;
+        font-family: Roboto;
+        text-align: center;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 8px;
+        margin-top: 9px;
     }
 }
