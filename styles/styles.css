@@ -16,7 +16,8 @@
 .image-container img {
   width: unset !important;
   height: 27vh !important;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .image-container .second-img {
   height: 92px !important;
@@ -85,7 +86,8 @@
   width: 100% !important;
   height: 47px !important;
   background: #1D2532;
-  backdrop-filter: blur(2.5999996662px);
+  -webkit-backdrop-filter: blur(2.5999996662px);
+          backdrop-filter: blur(2.5999996662px);
   display: flex;
   justify-content: end;
 }
@@ -150,7 +152,8 @@
   border-radius: 8px !important;
   border: 1px solid rgba(255, 255, 255, 0.07) !important;
   background: rgba(70, 73, 101, 0.21) !important;
-  backdrop-filter: blur(2.5999996662px) !important;
+  -webkit-backdrop-filter: blur(2.5999996662px) !important;
+          backdrop-filter: blur(2.5999996662px) !important;
   height: 279px !important;
   width: 351px !important;
   padding-top: 14%;
@@ -194,9 +197,14 @@
   border-radius: 4px !important;
   border: 1px solid rgba(255, 255, 255, 0.07) !important;
   background: rgba(70, 73, 101, 0.21) !important;
-  backdrop-filter: blur(2.5999999046px) !important;
+  -webkit-backdrop-filter: blur(2.5999999046px) !important;
+          backdrop-filter: blur(2.5999999046px) !important;
   height: 33px !important;
   width: 332px !important;
+  color: var(--white) !important;
+}
+
+::-moz-placeholder {
   color: var(--white) !important;
 }
 
@@ -264,7 +272,8 @@
 .my-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   background: rgba(26, 28, 40, 0.9);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   width: 375px;
   height: 52px;
 }
@@ -273,4 +282,10 @@
   height: 30px;
   background: url(../images/profile.png), lightgray 0% 0%/1.4999999665px 1.4999999665px repeat;
   mix-blend-mode: #FECB88;
+}
+
+body {
+  background-image: url("../images/Banners/background.svg");
+  background-color: #121B24;
+  height: 100vh;
 }/*# sourceMappingURL=styles.css.map */
