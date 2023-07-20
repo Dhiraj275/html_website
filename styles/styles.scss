@@ -410,12 +410,17 @@ header {
     }
 
     .tutorial {
+        margin: 10px 0;
+        padding: 10px;
         .section-wrap {
             justify-content: flex-start;
             overflow-x: scroll;
 
             .glass-section {
                 margin-right: 10px;
+                img{
+                    width: 120px;
+                }
             }
         }
     }
@@ -477,6 +482,9 @@ header {
         }
 
         .celeb {
+            img{
+                height: 190px;
+            }
             span {
                 text-align: center;
                 font-size: 12px;
@@ -489,7 +497,172 @@ header {
 }
 
 /* deposit page section */
+.deposit-page {
+    padding: 10px;
 
+    .note {
+        font-size: 12px;
+        color: #fff;
+
+        .danger {
+            color: #FF2C2C;
+        }
+    }
+
+    .switch {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+
+        button {
+            margin: 0 5px;
+        }
+    }
+
+    .glass-selection {
+
+        .glass-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            aspect-ratio: 1.5/1;
+        }
+    }
+
+    .qr-section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .detail {
+        padding: 10px;
+        margin: 10px 0;
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 12px;
+            padding: 10px 0;
+            border-bottom: 2px solid #212936;
+
+            &:nth-last-child(1) {
+                border: none;
+            }
+
+            div:nth-child(2) {
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .form {
+        padding: 10px 0;
+
+        .wrap {
+            display: flex;
+        }
+
+        .glass-control {
+            padding: 2px 10px;
+
+            label {
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
+
+            .form-control {
+                width: 100% !important;
+            }
+
+            .error {
+                color: #FF2C2C;
+                font-size: 10px;
+            }
+        }
+
+        .ammount-wrap {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 10px 0 10px;
+            flex-wrap: wrap;
+
+            .glass-section {
+                width: 100px;
+                border-radius: 4px;
+                margin: 5px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 30px;
+                font-size: 12px;
+
+                &.active {
+                    background-color: var(--blueColor)
+                }
+            }
+        }
+
+        button {
+            margin: 10px 0
+        }
+    }
+
+    .notes {
+        color: #fff;
+        margin: 10px 0;
+
+        h4 {
+            font-size: 16px;
+            color: #FF2C2C;
+        }
+
+        ul {
+            border-left: 1px dashed #fff;
+            padding: 0 0 0 10px;
+            list-style: none;
+
+            li {
+                position: relative;
+                font-size: 14px;
+
+                &::before {
+                    position: absolute;
+                    display: inline-block;
+                    content: "";
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                    left: -14.5px;
+                    background-image: linear-gradient(47deg, #3790FB 0%, #D141F6 100%);
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .wrap {
+            display: flex;
+            overflow-x: scroll;
+            margin: 6px 0;
+
+            img {
+                width: 150px;
+                height: 100px;
+                object-fit: fill;
+                border-radius: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
 
 
 /* Withdraw add account page section */
@@ -608,51 +781,6 @@ header {
         }
     }
 
-    .account-selection {
-        display: flex;
-        justify-content: space-between;
-        overflow-x: scroll;
-        margin: 20px 0;
-
-        .glass-section {
-            border-radius: 4px;
-            padding: 10px;
-            margin: 0 10px;
-            min-width: 140px;
-
-            .name {
-                font-size: 12px
-            }
-
-            .number {
-                font-size: 10px
-            }
-
-            .bank {
-                font-size: 10px
-            }
-
-            &.active {
-                position: relative;
-                background-image: linear-gradient(to left, #3790FB, #D141F6);
-                border: none;
-                overflow: hidden;
-
-                &::after {
-                    content: '';
-                    border-radius: 4px;
-                    background-image: linear-gradient(to left, #26355d, #3f295c);
-                    position: absolute;
-                    width: calc(100% - 1px);
-                    height: calc(100% - 1px);
-                    z-index: -1;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
-    }
 
     .ammount-wrap {
         display: flex;
@@ -694,7 +822,41 @@ header {
 
 /* inplay page section */
 
+.inplay-page {
+    .glass-section {
+        margin: 10px 0;
+        border-radius: 0;
+        padding: 10px
+    }
 
+    .inplay {
+        margin: 10px;
+        border-radius: 5px
+    }
+
+    .top-search-section {
+        padding: 10px;
+
+        .form-group {
+
+            .form-control {
+                width: 100% !important;
+                padding-left: 30px;
+                &::placeholder {
+                    color: #828FA4 !important;
+                }
+    
+            }
+
+            img {
+                position: absolute;
+                z-index: 9;
+                padding: 12px
+            }
+        }
+
+    }
+}
 
 
 
@@ -1527,25 +1689,50 @@ header {
     }
 }
 
-.top-search-section {
+
+
+.glass-selection {
     display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin: 20px 0;
 
-    .form-group {
-        display: flex;
-        width: 92%;
-        margin: 11px 10px;
+    .glass-section {
+        border-radius: 4px;
+        padding: 10px;
+        margin: 0 10px;
+        min-width: 140px;
 
-        .form-control {
-            border-left: unset !important;
+        .name {
+            font-size: 12px
         }
 
-        img {
-            border: 1px solid;
-            padding: 0px 12px;
-            background: #1c232f;
-            border-top-left-radius: 6px;
-            border-bottom-left-radius: 6px;
-            border-right: unset !important;
+        .number {
+            font-size: 10px
+        }
+
+        .bank {
+            font-size: 10px
+        }
+
+        &.active {
+            position: relative;
+            background-image: linear-gradient(to left, #3790FB, #D141F6);
+            border: none;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                border-radius: 4px;
+                background-image: linear-gradient(to left, #26355d, #3f295c);
+                position: absolute;
+                width: calc(100% - 1px);
+                height: calc(100% - 1px);
+                z-index: -1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 }

@@ -291,12 +291,19 @@ header .navbar .right .account-balance .add img {
 .landing-page .download-app .detail .left .name p {
   font-size: 10px;
 }
+.landing-page .tutorial {
+  margin: 10px 0;
+  padding: 10px;
+}
 .landing-page .tutorial .section-wrap {
   justify-content: flex-start;
   overflow-x: scroll;
 }
 .landing-page .tutorial .section-wrap .glass-section {
   margin-right: 10px;
+}
+.landing-page .tutorial .section-wrap .glass-section img {
+  width: 120px;
 }
 .landing-page .esports {
   margin: 20px 0;
@@ -342,6 +349,9 @@ header .navbar .right .account-balance .add img {
   justify-content: flex-start;
   overflow-x: scroll;
 }
+.landing-page .celebs .celeb img {
+  height: 190px;
+}
 .landing-page .celebs .celeb span {
   text-align: center;
   font-size: 12px;
@@ -351,6 +361,143 @@ header .navbar .right .account-balance .add img {
 }
 
 /* deposit page section */
+.deposit-page {
+  padding: 10px;
+}
+.deposit-page .note {
+  font-size: 12px;
+  color: #fff;
+}
+.deposit-page .note .danger {
+  color: #FF2C2C;
+}
+.deposit-page .switch {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.deposit-page .switch button {
+  margin: 0 5px;
+}
+.deposit-page .glass-selection .glass-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  aspect-ratio: 1.5/1;
+}
+.deposit-page .qr-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.deposit-page .detail {
+  padding: 10px;
+  margin: 10px 0;
+}
+.deposit-page .detail .info {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 0;
+  border-bottom: 2px solid #212936;
+}
+.deposit-page .detail .info:nth-last-child(1) {
+  border: none;
+}
+.deposit-page .detail .info div:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.deposit-page .detail .info div:nth-child(2) img {
+  margin-left: 10px;
+}
+.deposit-page .form {
+  padding: 10px 0;
+}
+.deposit-page .form .wrap {
+  display: flex;
+}
+.deposit-page .form .glass-control {
+  padding: 2px 10px;
+}
+.deposit-page .form .glass-control label {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.deposit-page .form .glass-control .form-control {
+  width: 100% !important;
+}
+.deposit-page .form .glass-control .error {
+  color: #FF2C2C;
+  font-size: 10px;
+}
+.deposit-page .form .ammount-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 10px;
+  flex-wrap: wrap;
+}
+.deposit-page .form .ammount-wrap .glass-section {
+  width: 100px;
+  border-radius: 4px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 12px;
+}
+.deposit-page .form .ammount-wrap .glass-section.active {
+  background-color: var(--blueColor);
+}
+.deposit-page .form button {
+  margin: 10px 0;
+}
+.deposit-page .notes {
+  color: #fff;
+  margin: 10px 0;
+}
+.deposit-page .notes h4 {
+  font-size: 16px;
+  color: #FF2C2C;
+}
+.deposit-page .notes ul {
+  border-left: 1px dashed #fff;
+  padding: 0 0 0 10px;
+  list-style: none;
+}
+.deposit-page .notes ul li {
+  position: relative;
+  font-size: 14px;
+}
+.deposit-page .notes ul li::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  left: -14.5px;
+  background-image: linear-gradient(47deg, #3790FB 0%, #D141F6 100%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.deposit-page .notes .wrap {
+  display: flex;
+  overflow-x: scroll;
+  margin: 6px 0;
+}
+.deposit-page .notes .wrap img {
+  width: 150px;
+  height: 100px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
 /* Withdraw add account page section */
 .withdrawal-add-page {
   padding: 10px;
@@ -440,45 +587,6 @@ header .navbar .right .account-balance .add img {
 .withdrawal-add-page .form button {
   margin: 10px 0;
 }
-.withdrawal-add-page .account-selection {
-  display: flex;
-  justify-content: space-between;
-  overflow-x: scroll;
-  margin: 20px 0;
-}
-.withdrawal-add-page .account-selection .glass-section {
-  border-radius: 4px;
-  padding: 10px;
-  margin: 0 10px;
-  min-width: 140px;
-}
-.withdrawal-add-page .account-selection .glass-section .name {
-  font-size: 12px;
-}
-.withdrawal-add-page .account-selection .glass-section .number {
-  font-size: 10px;
-}
-.withdrawal-add-page .account-selection .glass-section .bank {
-  font-size: 10px;
-}
-.withdrawal-add-page .account-selection .glass-section.active {
-  position: relative;
-  background-image: linear-gradient(to left, #3790FB, #D141F6);
-  border: none;
-  overflow: hidden;
-}
-.withdrawal-add-page .account-selection .glass-section.active::after {
-  content: "";
-  border-radius: 4px;
-  background-image: linear-gradient(to left, #26355d, #3f295c);
-  position: absolute;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .withdrawal-add-page .ammount-wrap {
   display: flex;
   justify-content: space-between;
@@ -502,6 +610,34 @@ header .navbar .right .account-balance .add img {
 /* Withdraw Exiting account page section */
 /* Withdraw add account dropdown page section */
 /* inplay page section */
+.inplay-page .glass-section {
+  margin: 10px 0;
+  border-radius: 0;
+  padding: 10px;
+}
+.inplay-page .inplay {
+  margin: 10px;
+  border-radius: 5px;
+}
+.inplay-page .top-search-section {
+  padding: 10px;
+}
+.inplay-page .top-search-section .form-group .form-control {
+  width: 100% !important;
+  padding-left: 30px;
+}
+.inplay-page .top-search-section .form-group .form-control::-moz-placeholder {
+  color: #828FA4 !important;
+}
+.inplay-page .top-search-section .form-group .form-control::placeholder {
+  color: #828FA4 !important;
+}
+.inplay-page .top-search-section .form-group img {
+  position: absolute;
+  z-index: 9;
+  padding: 12px;
+}
+
 .blue-btn {
   color: var(--fwhite) !important;
   text-align: center !important;
@@ -1258,22 +1394,42 @@ header .navbar .right .account-balance .add img {
   margin-top: 20px;
 }
 
-.top-search-section {
+.glass-selection {
   display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  margin: 20px 0;
 }
-.top-search-section .form-group {
-  display: flex;
-  width: 92%;
-  margin: 11px 10px;
+.glass-selection .glass-section {
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0 10px;
+  min-width: 140px;
 }
-.top-search-section .form-group .form-control {
-  border-left: unset !important;
+.glass-selection .glass-section .name {
+  font-size: 12px;
 }
-.top-search-section .form-group img {
-  border: 1px solid;
-  padding: 0px 12px;
-  background: #1c232f;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  border-right: unset !important;
+.glass-selection .glass-section .number {
+  font-size: 10px;
+}
+.glass-selection .glass-section .bank {
+  font-size: 10px;
+}
+.glass-selection .glass-section.active {
+  position: relative;
+  background-image: linear-gradient(to left, #3790FB, #D141F6);
+  border: none;
+  overflow: hidden;
+}
+.glass-selection .glass-section.active::after {
+  content: "";
+  border-radius: 4px;
+  background-image: linear-gradient(to left, #26355d, #3f295c);
+  position: absolute;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=styles.css.map */
