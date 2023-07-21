@@ -65,9 +65,6 @@ body {
     background-color: #121B24;
     height: 100vh;
 
-    .page {
-        margin-top: 20px;
-    }
 
     .page-title {
         color: #fff;
@@ -80,6 +77,8 @@ body {
         background-color: #121B24;
         background-size: cover;
         background-attachment: fixed;
+        margin-top: 80px;
+
     }
 }
 
@@ -152,6 +151,7 @@ header {
 .landing-page {
     .banner {
         position: relative;
+        margin-bottom: 20px;
 
         img {
             width: 100%;
@@ -173,54 +173,7 @@ header {
             display: flex;
             justify-content: space-between;
 
-            .category-wrap {
-                display: flex;
 
-                .glass-section {
-                    margin: 4px;
-                    height: 25px;
-                    width: 25px;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {
-                        width: 10px;
-                    }
-
-                    span {
-                        position: absolute;
-                        font-size: 8px;
-                        bottom: -5px;
-                        right: -5px;
-                        background-color: #464965;
-                        border: 1px solid #202237;
-                        padding: 1px 3px;
-                        border-radius: 9px;
-                        line-height: 8px;
-                    }
-                }
-
-                .active {
-                    position: relative;
-                    background-image: linear-gradient(to left, #3790FB, #D141F6);
-                    border: none;
-
-                    &::after {
-                        content: '';
-                        background-image: linear-gradient(to left, #26355d, #3f295c);
-                        position: absolute;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 50%;
-                        z-index: -1;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                }
-            }
         }
 
         .time {
@@ -363,7 +316,7 @@ header {
     }
 
     .download-app {
-        margin: 20px 0;
+        margin: 32px 0;
 
         .img {
             img {
@@ -412,13 +365,15 @@ header {
     .tutorial {
         margin: 10px 0;
         padding: 10px;
+
         .section-wrap {
             justify-content: flex-start;
             overflow-x: scroll;
 
             .glass-section {
                 margin-right: 10px;
-                img{
+
+                img {
                     width: 120px;
                 }
             }
@@ -450,10 +405,19 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin: 0 10px;
+                margin: 20px 10px;
 
-                img {
-                    height: 190px;
+                .img {
+                    position: relative;
+
+                    .game-img {
+                        position: absolute;
+                        z-index: 999;
+                        top: -10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
                 }
 
                 .light {
@@ -482,9 +446,10 @@ header {
         }
 
         .celeb {
-            img{
+            img {
                 height: 190px;
             }
+
             span {
                 text-align: center;
                 font-size: 12px;
@@ -816,9 +781,56 @@ header {
 /* Withdraw add account dropdown page section */
 
 
+// common
 
+.category-wrap {
+    display: flex;
 
+    .glass-section {
+        margin: 4px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        img {
+            width: 10px;
+        }
+
+        span {
+            position: absolute;
+            font-size: 8px;
+            bottom: -5px;
+            right: -5px;
+            background-color: #464965;
+            border: 1px solid #202237;
+            padding: 1px 3px;
+            border-radius: 9px;
+            line-height: 8px;
+        }
+    }
+
+    .active {
+        position: relative;
+        background-image: linear-gradient(to left, #3790FB, #D141F6);
+        border: none;
+
+        &::after {
+            content: '';
+            background-image: linear-gradient(to left, #26355d, #3f295c);
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-52%, -52%);
+        }
+    }
+}
 
 /* inplay page section */
 
@@ -834,6 +846,18 @@ header {
         border-radius: 5px
     }
 
+    .category-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .glass-section {
+            margin: 4px;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+        }
+    }
+
     .top-search-section {
         padding: 10px;
 
@@ -842,10 +866,11 @@ header {
             .form-control {
                 width: 100% !important;
                 padding-left: 30px;
+
                 &::placeholder {
                     color: #828FA4 !important;
                 }
-    
+
             }
 
             img {
@@ -1563,7 +1588,7 @@ header {
 }
 
 .popular-today {
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 .tranding-game {
@@ -1642,10 +1667,20 @@ header {
     height: 10px;
     padding: 2px;
     margin: 4px 0;
+    border-radius: 10px;
 
     .progress {
         background-image: linear-gradient(to left, #3790FB, #D141F6);
         width: 50%;
+        border-radius: 10px 0 0 10px;
+
+        img {
+            position: absolute;
+            left: calc(50% - 5px);
+            top: 0;
+            // filter: drop-shadow(0px 0px 1px #141521);
+            height: 10px;
+        }
     }
 }
 
@@ -1682,9 +1717,21 @@ header {
 
     &.casino {
         .section-wrap {
-            overflow: scroll;
+            overflow-x: scroll;
+            overflow-y: hidden;
             justify-content: flex-start;
-            margin-top: 20px;
+            padding: 10px 0;
+
+            img {
+                scale: 1.2;
+                margin-bottom: 0;
+            }
+
+            .glass-section {
+                margin: 10px;
+                width: 70px;
+                height: 60px;
+            }
         }
     }
 }
